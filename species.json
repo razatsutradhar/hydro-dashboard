@@ -1,0 +1,132 @@
+{
+  "Basil": {
+    "ph": [5.5, 6.5],
+    "ec": [1.0, 1.6],
+    "temp_f": [65, 80],
+    "growth_days": 60,
+    "growth_info": "Basil grows quickly in hydro. Ready to harvest in 4-6 weeks. Thrives with 16h light. Bolt-prone when temps exceed 85°F.",
+    "tips": [
+      "Pinch off flower buds immediately — bolting kills flavor",
+      "Harvest from the top to encourage bushier growth",
+      "Keep roots oxygenated; basil is sensitive to root rot",
+      "Ideal EC rises slightly at harvest (1.4-1.6)"
+    ]
+  },
+  "Lettuce": {
+    "ph": [6.0, 7.0],
+    "ec": [0.8, 1.2],
+    "temp_f": [60, 75],
+    "growth_days": 30,
+    "growth_info": "One of the fastest hydro crops. Baby leaf ready in 2-3 weeks, full head in 4-5. Bolts above 75°F — keep it cool.",
+    "tips": [
+      "Low EC prevents tip burn on outer leaves",
+      "Use 12-16h light; too much causes bolting",
+      "Harvest outer leaves to extend plant life",
+      "Butterhead varieties are most forgiving for beginners"
+    ]
+  },
+  "Spinach": {
+    "ph": [6.0, 7.0],
+    "ec": [1.8, 2.3],
+    "temp_f": [60, 70],
+    "growth_days": 40,
+    "growth_info": "Cold-preferring crop. Bolt-prone above 75°F. Higher EC than lettuce; nutrient-dense feeder. Ready in 5-6 weeks.",
+    "tips": [
+      "Needs higher EC than most leafy greens",
+      "Keep temps on the cool end for best flavor",
+      "Harvest whole plant at 6 weeks or outer leaves continuously",
+      "Avoid ammonia-heavy nutrients — spinach prefers nitrate nitrogen"
+    ]
+  },
+  "Kale": {
+    "ph": [5.5, 6.5],
+    "ec": [1.6, 2.5],
+    "temp_f": [60, 75],
+    "growth_days": 55,
+    "growth_info": "Hardy and forgiving. Baby kale ready in 3-4 weeks. Mature in 7-8 weeks. Higher EC tolerance than most leafy greens.",
+    "tips": [
+      "Harvest outer leaves to keep plant producing",
+      "Light frost improves flavor — cooler temps are fine",
+      "Higher EC needed for healthy color and thickness",
+      "Good companion with most other leafy greens (similar ranges)"
+    ]
+  },
+  "Mint": {
+    "ph": [5.5, 6.5],
+    "ec": [2.0, 3.0],
+    "temp_f": [65, 70],
+    "growth_days": 90,
+    "growth_info": "Aggressive spreader — keep in dedicated pods. Harvest frequently. Prefers stable, slightly cooler temps. Long-lived perennial.",
+    "tips": [
+      "Harvest often to prevent woody stems",
+      "Keep isolated — mint spreads roots aggressively",
+      "Replace plants every 6 months as older stems become woody",
+      "High EC tolerance; bumping EC improves aroma intensity"
+    ]
+  },
+  "Tomato (Cherry)": {
+    "ph": [5.5, 6.5],
+    "ec": [2.0, 3.5],
+    "temp_f": [65, 85],
+    "growth_days": 70,
+    "growth_info": "Heavy feeder requiring support (trellising or stakes). EC needs rise as plant matures and fruits. Needs pollenation — shake flowers daily.",
+    "tips": [
+      "Increase EC to 3.0-3.5 during fruiting for sweeter tomatoes",
+      "Prune suckers to focus energy on fruit production",
+      "Shake or vibrate flowers daily to self-pollinate",
+      "Watch for calcium deficiency (blossom end rot) — check pH carefully"
+    ]
+  },
+  "Strawberry": {
+    "ph": [5.5, 6.5],
+    "ec": [1.0, 1.4],
+    "temp_f": [65, 80],
+    "growth_days": 120,
+    "growth_info": "Slow to establish (2-4 months to first fruit). Everbearing varieties produce year-round. Sensitive to high EC. Keep runners trimmed.",
+    "tips": [
+      "Use everbearing varieties (Seascape, Albion) for continuous harvest",
+      "Remove runners unless you want propagation",
+      "Low EC critical — high salinity stunts fruit size",
+      "Expose to 12h light minimum for consistent fruiting"
+    ]
+  },
+  "Cucumber": {
+    "ph": [5.5, 6.0],
+    "ec": [1.7, 2.5],
+    "temp_f": [70, 85],
+    "growth_days": 55,
+    "growth_info": "Vining plant — needs significant vertical space and trellis. Warm-temp crop. Produces prolifically once established. Needs pollination.",
+    "tips": [
+      "Train vines vertically to save space",
+      "Hand-pollinate flowers with a small brush or shake plant",
+      "Harvest young (6-8\") for best flavor and to encourage more fruit",
+      "Needs consistent temps above 65°F — cold shock causes bitter fruit"
+    ]
+  },
+  "Swiss Chard": {
+    "ph": [6.0, 7.0],
+    "ec": [1.8, 2.3],
+    "temp_f": [60, 75],
+    "growth_days": 50,
+    "growth_info": "Colorful, cold-tolerant, and prolific. Cut-and-come-again harvesting. Closely related to spinach — similar care requirements.",
+    "tips": [
+      "Harvest outer stalks to keep center growing",
+      "Tolerates mild frost — wider temp range than most crops",
+      "Rainbow chard varieties are identical care but add color to setup",
+      "Good companion with spinach and kale — overlapping optimal ranges"
+    ]
+  },
+  "Pepper (Bell)": {
+    "ph": [5.5, 6.5],
+    "ec": [2.0, 3.5],
+    "temp_f": [70, 85],
+    "growth_days": 90,
+    "growth_info": "Warm-season crop, slow to mature. Green peppers are unripe bells — leave longer for red/yellow. Needs consistent warmth and pollination.",
+    "tips": [
+      "Needs temps above 70°F consistently — cold slows growth significantly",
+      "Increase EC during fruiting for better yield",
+      "Shake or use a fan to help pollinate flowers",
+      "Remove early flowers on young plants to build root strength first"
+    ]
+  }
+}
