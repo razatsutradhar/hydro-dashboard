@@ -1,47 +1,58 @@
-import { Sprout, Plus } from 'lucide-react'
+import { Sprout } from 'lucide-react'
+
+const LAYERS = 6
+const PODS_PER_LAYER = 3
 
 export default function PodGrid({ pods, onPodClick }) {
+  const layers = Array.from({ length: LAYERS }, (_, i) =>
+    pods.slice(i * PODS_PER_LAYER, i * PODS_PER_LAYER + PODS_PER_LAYER)
+  )
+
   return (
     <div>
-      <h2 className="text-lg font-semibold text-slate-100 mb-3">Tower Pods</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {pods.map(pod => (
-          <PodCard key={pod.pod_id} pod={pod} onClick={() => onPodClick(pod)} />
+      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wide mb-2 flex items-center gap-3">
+        <span className="w-12 text-right">Layer</span>
+        <span className="grid grid-cols-3 gap-2 flex-1 text-center">
+          <span>Left</span><span>Front</span><span>Right</span>
+        </span>
+      </div>
+      <div className="space-y-2">
+        {layers.map((layerPods, layerIdx) => (
+          <div key={layerIdx} className="flex items-center gap-3">
+            <span className="w-12 text-right text-xs font-semibold text-slate-400 shrink-0">
+              L{layerIdx + 1}
+            </span>
+            <div className="grid grid-cols-3 gap-2 flex-1">
+              {layerPods.map(pod => (
+                <PodCell key={pod.pod_id} pod={pod} onClick={() => onPodClick(pod)} />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>
   )
 }
 
-function PodCard({ pod, onClick }) {
+function PodCell({ pod, onClick }) {
   const occupied = !!pod.species
   return (
     <button
       onClick={onClick}
-      className={`rounded-xl border p-4 text-left transition-all hover:scale-105 active:scale-95 ${
+      className={`rounded-lg border px-2 py-2 text-left text-xs transition-all hover:scale-[1.03] active:scale-95 w-full ${
         occupied
-          ? 'bg-teal-900/40 border-teal-700 hover:border-teal-500'
-          : 'bg-slate-800 border-slate-700 hover:border-slate-500'
+          ? 'bg-green-50 border-green-300 hover:border-green-400'
+          : 'bg-white border-slate-200 hover:border-slate-400'
       }`}
     >
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-xs text-slate-400 font-mono">Pod {pod.pod_id}</span>
-        {occupied
-          ? <Sprout size={16} className="text-teal-400" />
-          : <Plus size={16} className="text-slate-500" />
-        }
+      <div className="flex items-center justify-between mb-0.5">
+        <span className="text-slate-400 font-mono text-[10px]">#{pod.pod_id}</span>
+        {occupied && <Sprout size={10} className="text-green-500" />}
       </div>
       {occupied ? (
-        <>
-          <p className="text-sm font-semibold text-slate-100 leading-tight">{pod.species}</p>
-          {pod.planted_at && (
-            <p className="text-xs text-slate-500 mt-1">
-              Planted {new Date(pod.planted_at).toLocaleDateString()}
-            </p>
-          )}
-        </>
+        <p className="font-semibold text-slate-700 truncate leading-tight">{pod.species}</p>
       ) : (
-        <p className="text-sm text-slate-500">Empty</p>
+        <p className="text-slate-400">Empty</p>
       )}
     </button>
   )

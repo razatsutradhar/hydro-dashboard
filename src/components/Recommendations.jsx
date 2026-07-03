@@ -9,7 +9,6 @@ function computeRecs(pods, speciesDb) {
 
   const params = ['ph', 'ec', 'temp_f']
   const results = {}
-
   for (const param of params) {
     const overlapMin = Math.max(...data.map(d => d[param][0]))
     const overlapMax = Math.min(...data.map(d => d[param][1]))
@@ -22,7 +21,6 @@ function computeRecs(pods, speciesDb) {
       individualRanges: data.map((d, i) => ({ species: activeSpecies[i], range: d[param] }))
     }
   }
-
   return results
 }
 
@@ -31,39 +29,39 @@ export default function Recommendations({ pods, speciesDb }) {
 
   if (!recs) {
     return (
-      <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
-        <h2 className="text-lg font-semibold text-slate-100 mb-2">Recommendations</h2>
-        <p className="text-sm text-slate-500">Assign plants to pods to see recommendations.</p>
+      <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
+        <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-2">Recommendations</h2>
+        <p className="text-sm text-slate-400">Assign plants to pods to see recommendations.</p>
       </div>
     )
   }
 
-  const labels = { ph: 'pH', ec: 'EC (mS/cm)', temp_f: 'Water Temp (°F)' }
+  const labels = { ph: 'pH', ec: 'EC (mS/cm)', temp_f: 'Temp (°F)' }
   const anyConflict = Object.values(recs).some(r => r.conflict)
 
   return (
-    <div className="bg-slate-800 rounded-xl p-4 border border-slate-700">
+    <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
       <div className="flex items-center gap-2 mb-4">
-        <h2 className="text-lg font-semibold text-slate-100">Recommendations</h2>
+        <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide">Recommendations</h2>
         {anyConflict
-          ? <AlertTriangle size={16} className="text-yellow-400" />
-          : <CheckCircle size={16} className="text-green-400" />
+          ? <AlertTriangle size={15} className="text-amber-500" />
+          : <CheckCircle size={15} className="text-green-500" />
         }
       </div>
 
       <div className="grid grid-cols-3 gap-3">
         {Object.entries(recs).map(([param, r]) => (
-          <div key={param} className={`rounded-lg p-3 border ${r.conflict ? 'border-yellow-700 bg-yellow-900/20' : 'border-slate-700 bg-slate-900'}`}>
-            <p className="text-xs text-slate-400 mb-1">{labels[param]}</p>
+          <div key={param} className={`rounded-lg p-3 border ${r.conflict ? 'border-amber-200 bg-amber-50' : 'border-slate-100 bg-slate-50'}`}>
+            <p className="text-xs text-slate-500 mb-1">{labels[param]}</p>
             {r.conflict ? (
               <div>
-                <p className="text-yellow-400 font-semibold text-sm">Conflict</p>
-                <p className="text-xs text-slate-500 mt-1">Species ranges don't overlap</p>
+                <p className="text-amber-600 font-semibold text-sm">Conflict</p>
+                <p className="text-xs text-slate-400 mt-1">Ranges don't overlap</p>
               </div>
             ) : (
               <div>
-                <p className="text-xl font-bold text-teal-400">{r.target}</p>
-                <p className="text-xs text-slate-500">range {r.min}–{r.max}</p>
+                <p className="text-xl font-bold text-teal-600">{r.target}</p>
+                <p className="text-xs text-slate-400">range {r.min}–{r.max}</p>
               </div>
             )}
           </div>
@@ -71,10 +69,10 @@ export default function Recommendations({ pods, speciesDb }) {
       </div>
 
       {anyConflict && (
-        <div className="mt-3 p-3 bg-yellow-900/20 border border-yellow-800 rounded-lg">
-          <p className="text-xs text-yellow-300 font-semibold mb-1">Conflicting species detected:</p>
+        <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+          <p className="text-xs text-amber-700 font-semibold mb-1">Conflicting parameters:</p>
           {Object.entries(recs).filter(([, r]) => r.conflict).map(([param, r]) => (
-            <p key={param} className="text-xs text-slate-400">
+            <p key={param} className="text-xs text-slate-500">
               {labels[param]}: {r.individualRanges.map(x => `${x.species} (${x.range[0]}–${x.range[1]})`).join(' vs ')}
             </p>
           ))}
