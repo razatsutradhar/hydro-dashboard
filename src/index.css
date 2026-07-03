@@ -6,3 +6,23 @@ body {
   background-color: #f8fafc;
   color: #1e293b;
 }
+
+/* Desktop-only alignment: pod grid rows match SVG tower layer heights */
+@media (min-width: 768px) {
+  .pod-grid-container {
+    height: 500px;      /* SVG_H */
+  }
+  .pod-grid-header {
+    height: 30px;       /* TOWER_TOP — matches water tube space */
+    align-items: flex-end;
+    padding-bottom: 4px;
+  }
+  .pod-grid-rows {
+    padding-bottom: 30px;  /* 500 - 470 — matches reservoir space */
+  }
+  .pod-row {
+    height: 73.33px;    /* LAYER_H = 440/6 */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

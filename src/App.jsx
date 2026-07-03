@@ -47,20 +47,16 @@ export default function App() {
           <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-4">
             Tower Pods
           </h2>
-          <div className="flex gap-6 items-start overflow-x-auto">
-            {/* Tower visual */}
-            <div className="shrink-0">
+          {/* Mobile: tower above grid. Desktop: side by side with aligned heights. */}
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 md:items-start">
+            <div className="flex justify-center md:block">
               {pods.length > 0 && (
                 <TowerView pods={pods} onPodClick={setSelectedPod} />
               )}
             </div>
-
-            {/* 3x6 pod grid */}
-            <div className="flex-1 min-w-0">
-              {pods.length > 0 && (
-                <PodGrid pods={pods} onPodClick={setSelectedPod} />
-              )}
-            </div>
+            {pods.length > 0 && (
+              <PodGrid pods={pods} onPodClick={setSelectedPod} />
+            )}
           </div>
         </div>
       </main>
