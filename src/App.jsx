@@ -47,7 +47,7 @@ export default function App() {
           <h2 className="text-sm font-semibold text-slate-700 uppercase tracking-wide mb-4">
             Tower Pods
           </h2>
-          <div className="flex gap-8 items-start">
+          <div className="flex gap-6 items-start overflow-x-auto">
             {/* Tower visual */}
             <div className="shrink-0">
               {pods.length > 0 && (
