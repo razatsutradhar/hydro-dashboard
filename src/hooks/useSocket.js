@@ -32,12 +32,16 @@ export function useSocket() {
     return () => socket.disconnect()
   }, [])
 
-  const updatePod = async (podId, species, plantedAt) => {
-    await fetch(`${BACKEND_URL}/api/pods/${podId}`, {
+  const updatePod = async (podId, species, plantedAt, token) => {
+    const res = await fetch(`${BACKEND_URL}/api/pods/${podId}`, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
       body: JSON.stringify({ species: species || null, planted_at: plantedAt || null }),
     })
+    return res.status
   }
 
   return { connected, pods, sensorData, updatePod }
