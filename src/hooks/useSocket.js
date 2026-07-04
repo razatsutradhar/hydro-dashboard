@@ -39,7 +39,7 @@ export function useSocket() {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
-      body: JSON.stringify({ species: species || null, planted_at: plantedAt || null }),
+      body: JSON.stringify({ species: species ?? null, planted_at: plantedAt ?? null }),
     })
     return res.status
   }

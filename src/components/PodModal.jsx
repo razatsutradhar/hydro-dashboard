@@ -9,13 +9,13 @@ export default function PodModal({ pod, speciesDb, onClose, onSave }) {
   const speciesList = Object.keys(speciesDb).sort()
   const speciesInfo = speciesDb[selectedSpecies]
 
-  const handleSave = () => {
-    onSave(pod.pod_id, selectedSpecies || null, plantedAt || null)
+  const handleClear = async () => {
+    await onSave(pod.pod_id, null, null)
     onClose()
   }
 
-  const handleClear = () => {
-    onSave(pod.pod_id, null, null)
+  const handleSaveAndClose = async () => {
+    await onSave(pod.pod_id, selectedSpecies || null, plantedAt || null)
     onClose()
   }
 
@@ -70,7 +70,7 @@ export default function PodModal({ pod, speciesDb, onClose, onSave }) {
                 />
               </div>
               <div className="flex gap-2 pt-2">
-                <button onClick={handleSave} className="flex-1 bg-teal-600 hover:bg-teal-500 text-white rounded-lg py-2 text-sm font-medium transition-colors">
+                <button onClick={handleSaveAndClose} className="flex-1 bg-teal-600 hover:bg-teal-500 text-white rounded-lg py-2 text-sm font-medium transition-colors">
                   Save
                 </button>
                 {pod.species && (

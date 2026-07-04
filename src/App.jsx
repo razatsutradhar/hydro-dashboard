@@ -24,12 +24,19 @@ export default function App() {
   }, [])
 
   const handleSave = async (podId, species, plantedAt) => {
-    const status = await updatePod(podId, species, plantedAt, token)
-    if (status === 401) {
-      // Token expired or invalid — log out and prompt re-auth
-      setToken('')
-      sessionStorage.removeItem('hydro_token')
-      setShowAuthModal(true)
+    try {
+      const status = await updatePod(podId, species, plantedAt, token)
+      if (status === 401) {
+        setToken('')
+        sessionStorage.removeItem('hydro_token')
+        setShowAuthModal(true)
+      } else if (status >= 400) {
+        console.error(`Pod update failed: HTTP ${status}`)
+        alert(`Failed to save pod (HTTP ${status}). Check the console for details.`)
+      }
+    } catch (err) {
+      console.error('Pod update network error:', err)
+      alert(`Failed to reach the backend: ${err.message}`)
     }
   }
 
