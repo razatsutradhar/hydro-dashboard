@@ -1,4 +1,4 @@
-import { X, Leaf, Calendar, Lightbulb } from 'lucide-react'
+import { X, Leaf, Calendar, Lightbulb, Sprout, Thermometer, Sun } from 'lucide-react'
 import { useState } from 'react'
 
 export default function PodModal({ pod, speciesDb, onClose, onSave }) {
@@ -102,6 +102,29 @@ export default function PodModal({ pod, speciesDb, onClose, onSave }) {
                     </div>
                     <p className="text-sm text-slate-500 leading-relaxed">{speciesInfo.growth_info}</p>
                   </div>
+                  {speciesInfo.germination && (
+                    <div>
+                      <div className="flex items-center gap-2 text-slate-700 font-medium text-sm mb-2">
+                        <Sprout size={14} className="text-green-500" />
+                        Germination
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 mb-2">
+                        <InfoChip label="Germ Temp °F" value={`${speciesInfo.germination.temp_f[0]}–${speciesInfo.germination.temp_f[1]}`} />
+                        <InfoChip label="Days to Sprout" value={`${speciesInfo.germination.days[0]}–${speciesInfo.germination.days[1]}`} />
+                      </div>
+                      <div className="flex gap-2 mb-2">
+                        <span className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border ${speciesInfo.germination.needs_heat ? 'bg-orange-50 text-orange-600 border-orange-200' : 'bg-slate-50 text-slate-400 border-slate-200'}`}>
+                          <Thermometer size={11} />
+                          Heat mat {speciesInfo.germination.needs_heat ? 'recommended' : 'not needed'}
+                        </span>
+                        <span className={`inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full border ${speciesInfo.germination.needs_light ? 'bg-yellow-50 text-yellow-600 border-yellow-200' : 'bg-slate-50 text-slate-400 border-slate-200'}`}>
+                          <Sun size={11} />
+                          Light {speciesInfo.germination.needs_light ? 'required' : 'not required'}
+                        </span>
+                      </div>
+                      <p className="text-xs text-slate-500 leading-relaxed">{speciesInfo.germination.notes}</p>
+                    </div>
+                  )}
                   <div>
                     <div className="flex items-center gap-2 text-slate-700 font-medium text-sm mb-2">
                       <Lightbulb size={14} className="text-amber-500" />
