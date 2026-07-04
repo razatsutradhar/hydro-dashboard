@@ -10,7 +10,14 @@
       "Harvest from the top to encourage bushier, more productive growth",
       "Keep roots oxygenated; basil is highly susceptible to root rot",
       "Nudge EC to 1.4-1.6 just before harvest for slightly more intense aroma"
-    ]
+    ],
+    "germination": {
+      "temp_f": [70, 85],
+      "days": [5, 7],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Sow shallowly (¼ inch). A heat mat speeds germination significantly. Keep medium moist but not waterlogged. Move to light immediately after sprouts appear."
+    }
   },
   "Cilantro": {
     "ph": [6.0, 6.5],
@@ -23,163 +30,14 @@
       "Keep water temp below 70°F — warm roots accelerate bolting significantly",
       "Direct-seed into pods rather than transplanting; cilantro hates root disturbance",
       "Harvest outer leaves regularly; once flowering starts, flavor is largely lost"
-    ]
-  },
-  "Green Onion": {
-    "ph": [6.0, 6.8],
-    "ec": [1.2, 2.5],
-    "temp_f": [65, 75],
-    "growth_days": 65,
-    "growth_info": "Bunching onion with exceptional cut-and-come-again regeneration — shoots regrow within days of cutting. Produces 3-4 harvests per plant cycle. Needs slightly higher pH than most herbs.",
-    "tips": [
-      "Cut 1 inch above the growing medium, never pull — roots must stay intact for regrowth",
-      "Start seedlings at EC 0.7-1.2, gradually increase to 2.0-2.5 during bulking",
-      "Harvest when stems are 6-8 inches tall with roughly ¼-inch thick bases",
-      "Keep water temp 64-68°F for maximum dissolved oxygen and root health"
-    ]
-  },
-  "Kale": {
-    "ph": [5.5, 6.5],
-    "ec": [1.6, 2.5],
-    "temp_f": [60, 75],
-    "growth_days": 70,
-    "growth_info": "Hardy and forgiving. Baby kale ready in 3-4 weeks. Mature in 8-12 weeks. Higher EC tolerance than most leafy greens.",
-    "tips": [
-      "Harvest outer leaves to keep plant producing",
-      "Light frost improves flavor — cooler temps are fine",
-      "Higher EC needed for healthy color and thickness",
-      "Good companion with most other leafy greens (similar ranges)"
-    ]
-  },
-  "Lettuce": {
-    "ph": [5.5, 6.5],
-    "ec": [0.8, 1.2],
-    "temp_f": [65, 75],
-    "growth_days": 35,
-    "growth_info": "One of the fastest hydro crops. Baby leaf ready in 2-3 weeks, full head in 4-5 weeks. Bolts above 75°F — keep it cool.",
-    "tips": [
-      "Low EC prevents tip burn on outer leaves",
-      "Use 14-16h light; keep temps below 75°F to prevent bolting",
-      "Harvest outer leaves to extend plant life",
-      "Butterhead varieties are most forgiving for beginners"
-    ]
-  },
-  "Mint": {
-    "ph": [5.5, 6.5],
-    "ec": [1.0, 2.0],
-    "temp_f": [65, 75],
-    "growth_days": 90,
-    "growth_info": "Aggressive spreader — keep in dedicated pods. Harvest frequently. Prefers stable, slightly cooler temps. Long-lived perennial.",
-    "tips": [
-      "Harvest often to prevent woody stems",
-      "Keep isolated — mint spreads roots aggressively",
-      "Replace plants every 6 months as older stems become woody",
-      "Mild EC increases (to 2.2-2.4 mS/cm) may slightly intensify aroma"
-    ]
-  },
-  "Parsley": {
-    "ph": [5.5, 6.5],
-    "ec": [0.8, 1.8],
-    "temp_f": [60, 75],
-    "growth_days": 70,
-    "growth_info": "Cold-hardy herb with slow germination but consistent cut-and-come-again production. Italian flat-leaf varieties outperform curly in hydroponic yield. Regrowth cycles occur every 3 weeks after each cut.",
-    "tips": [
-      "Harvest by cutting stems to 2-3 inches above medium; regrowth occurs every 3 weeks",
-      "Replace plants after 2-3 harvests (8-12 weeks) as older plants lose vigor",
-      "Provide 14-16 hours of light daily for maximum yield",
-      "Wide EC and temp tolerance makes parsley very forgiving — great for mixed towers"
-    ]
-  },
-  "Pepper (Bell)": {
-    "ph": [5.5, 6.5],
-    "ec": [2.0, 3.0],
-    "temp_f": [68, 75],
-    "growth_days": 90,
-    "growth_info": "Warm-season crop, slow to mature. Green peppers are unripe bells — leave longer for red/yellow. Needs consistent warmth and pollination.",
-    "tips": [
-      "Needs temps above 70°F consistently — cold slows growth significantly",
-      "Increase EC during fruiting for better yield",
-      "Shake or use a fan to help pollinate flowers",
-      "Remove early flowers on young plants to build root strength first"
-    ]
-  },
-  "Pepper (Thai Chili)": {
-    "ph": [5.8, 6.5],
-    "ec": [2.0, 3.5],
-    "temp_f": [70, 85],
-    "growth_days": 100,
-    "growth_info": "Warm-season hot pepper requiring consistently high temps and a rich nutrient solution during fruiting. Self-pollinating but benefits from airflow around flowers. Compact plant, prolific producer once established.",
-    "tips": [
-      "Shift to low-nitrogen, high-P/K nutrients during flowering and fruiting",
-      "Never let temps drop below 65°F at night — cold shock causes flower drop",
-      "Shake plants or run a fan near flowers to improve pollination and fruit set",
-      "Maintain 40-70% humidity; too dry or too wet during flowering causes bud drop"
-    ]
-  },
-  "Spinach": {
-    "ph": [5.5, 6.5],
-    "ec": [1.8, 2.3],
-    "temp_f": [60, 68],
-    "growth_days": 40,
-    "growth_info": "Cold-preferring crop. Bolt-prone above 75°F. Higher EC than lettuce; nutrient-dense feeder. Ready in 5-6 weeks.",
-    "tips": [
-      "Needs higher EC than most leafy greens",
-      "Keep temps on the cool end for best flavor",
-      "Harvest whole plant at 6 weeks or outer leaves continuously",
-      "Avoid ammonia-heavy nutrients — spinach prefers nitrate nitrogen"
-    ]
-  },
-  "Strawberry": {
-    "ph": [5.5, 6.2],
-    "ec": [1.0, 1.8],
-    "temp_f": [60, 68],
-    "growth_days": 120,
-    "growth_info": "Slow to establish (2-4 months to first fruit). Everbearing varieties produce year-round. Sensitive to high EC. Keep runners trimmed.",
-    "tips": [
-      "Use everbearing varieties (Seascape, Albion) for continuous harvest",
-      "Remove runners unless you want propagation",
-      "Low EC critical — high salinity stunts fruit size",
-      "Expose to 12h light minimum for consistent fruiting"
-    ]
-  },
-  "Swiss Chard": {
-    "ph": [6.0, 6.8],
-    "ec": [1.8, 2.3],
-    "temp_f": [60, 75],
-    "growth_days": 50,
-    "growth_info": "Colorful, cold-tolerant, and prolific. Cut-and-come-again harvesting. Closely related to spinach — similar care requirements.",
-    "tips": [
-      "Harvest outer stalks to keep center growing",
-      "Tolerates mild frost — wider temp range than most crops",
-      "Rainbow chard varieties are identical care but add color to setup",
-      "Good companion with spinach and kale — overlapping optimal ranges"
-    ]
-  },
-  "Tomato (Cherry)": {
-    "ph": [5.5, 6.5],
-    "ec": [2.0, 3.5],
-    "temp_f": [65, 72],
-    "growth_days": 70,
-    "growth_info": "Heavy feeder requiring support (trellising or stakes). EC needs rise as plant matures and fruits. Needs pollination — shake or vibrate flowers daily.",
-    "tips": [
-      "Increase EC to 3.0-3.5 during fruiting for sweeter tomatoes",
-      "Prune suckers to focus energy on fruit production",
-      "Shake or vibrate flowers daily to self-pollinate",
-      "Watch for calcium deficiency (blossom end rot) — check pH carefully"
-    ]
-  },
-  "Tomato (Cloudy Day Hybrid)": {
-    "ph": [5.8, 6.5],
-    "ec": [2.0, 3.5],
-    "temp_f": [65, 75],
-    "growth_days": 70,
-    "growth_info": "Indeterminate hybrid bred to thrive in low-light, cool, and overcast conditions. Excellent blight resistance and consistent yields in indoor or northern settings. Requires trellising and active pruning.",
-    "tips": [
-      "Tolerates lower light than standard tomatoes — 8-10 hours minimum daily",
-      "Keep EC at 2.0-2.5 during flowering, raise to 3.0-3.5 during fruiting for sweeter fruit",
-      "Shake or vibrate flowers daily for self-pollination; a fan running near blooms helps",
-      "Prune suckers regularly — indeterminate growth needs active management to direct energy to fruit"
-    ]
+    ],
+    "germination": {
+      "temp_f": [55, 68],
+      "days": [7, 14],
+      "needs_heat": false,
+      "needs_light": false,
+      "notes": "Crack seeds gently before sowing to improve germination rate. Prefers cool conditions — avoid heat mats. Sow ¼ inch deep. Germinates best around 60-65°F."
+    }
   },
   "Cucumber": {
     "ph": [5.5, 6.0],
@@ -192,6 +50,253 @@
       "Hand-pollinate flowers with a small brush or shake plant",
       "Harvest young (6-8\") for best flavor and to encourage more fruit",
       "Needs consistent temps above 65°F — cold shock causes bitter fruit"
-    ]
+    ],
+    "germination": {
+      "temp_f": [75, 90],
+      "days": [3, 7],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Fast germinator when warm. Heat mat strongly recommended. Sow on edge (not flat) to reduce damping off. Do not overwater — seeds rot easily in cold, wet medium."
+    }
+  },
+  "Green Onion": {
+    "ph": [6.0, 6.8],
+    "ec": [1.2, 2.5],
+    "temp_f": [65, 75],
+    "growth_days": 65,
+    "growth_info": "Bunching onion with exceptional cut-and-come-again regeneration — shoots regrow within days of cutting. Produces 3-4 harvests per plant cycle. Needs slightly higher pH than most herbs.",
+    "tips": [
+      "Cut 1 inch above the growing medium, never pull — roots must stay intact for regrowth",
+      "Start seedlings at EC 0.7-1.2, gradually increase to 2.0-2.5 during bulking",
+      "Harvest when stems are 6-8 inches tall with roughly ¼-inch thick bases",
+      "Keep water temp 64-68°F for maximum dissolved oxygen and root health"
+    ],
+    "germination": {
+      "temp_f": [65, 75],
+      "days": [7, 14],
+      "needs_heat": false,
+      "needs_light": false,
+      "notes": "Sow ¼ inch deep, 2-3 seeds per cell. Thin to one after emergence. Germination is reliable at room temp — no heat mat needed. Slow to establish early but regenerates well once cut."
+    }
+  },
+  "Kale": {
+    "ph": [5.5, 6.5],
+    "ec": [1.6, 2.5],
+    "temp_f": [60, 75],
+    "growth_days": 70,
+    "growth_info": "Hardy and forgiving. Baby kale ready in 3-4 weeks. Mature in 8-12 weeks. Higher EC tolerance than most leafy greens.",
+    "tips": [
+      "Harvest outer leaves to keep plant producing",
+      "Light frost improves flavor — cooler temps are fine",
+      "Higher EC needed for healthy color and thickness",
+      "Good companion with most other leafy greens (similar ranges)"
+    ],
+    "germination": {
+      "temp_f": [65, 75],
+      "days": [5, 7],
+      "needs_heat": false,
+      "needs_light": false,
+      "notes": "Reliable and fast germinator — no heat mat needed. Sow ¼ to ½ inch deep. Keep medium evenly moist. Sprouts in as little as 4-5 days at 70°F."
+    }
+  },
+  "Lettuce": {
+    "ph": [5.5, 6.5],
+    "ec": [0.8, 1.2],
+    "temp_f": [65, 75],
+    "growth_days": 35,
+    "growth_info": "One of the fastest hydro crops. Baby leaf ready in 2-3 weeks, full head in 4-5 weeks. Bolts above 75°F — keep it cool.",
+    "tips": [
+      "Low EC prevents tip burn on outer leaves",
+      "Use 14-16h light; keep temps below 75°F to prevent bolting",
+      "Harvest outer leaves to extend plant life",
+      "Butterhead varieties are most forgiving for beginners"
+    ],
+    "germination": {
+      "temp_f": [60, 68],
+      "days": [2, 5],
+      "needs_heat": false,
+      "needs_light": false,
+      "notes": "Do NOT use a heat mat — lettuce goes thermally dormant above 75°F and won't germinate. Keep cool (60-68°F). Surface sow or cover very lightly. One of the fastest and easiest germinators."
+    }
+  },
+  "Mint": {
+    "ph": [5.5, 6.5],
+    "ec": [1.0, 2.0],
+    "temp_f": [65, 75],
+    "growth_days": 90,
+    "growth_info": "Aggressive spreader — keep in dedicated pods. Harvest frequently. Prefers stable, slightly cooler temps. Long-lived perennial.",
+    "tips": [
+      "Harvest often to prevent woody stems",
+      "Keep isolated — mint spreads roots aggressively",
+      "Replace plants every 6 months as older stems become woody",
+      "Mild EC increases (to 2.2-2.4 mS/cm) may slightly intensify aroma"
+    ],
+    "germination": {
+      "temp_f": [65, 75],
+      "days": [10, 16],
+      "needs_heat": false,
+      "needs_light": true,
+      "notes": "Mint seeds require light to germinate — do NOT cover with medium. Press seeds onto the surface and keep moist. Slow and sometimes patchy germinator. Propagating from cuttings is much faster and more reliable."
+    }
+  },
+  "Parsley": {
+    "ph": [5.5, 6.5],
+    "ec": [0.8, 1.8],
+    "temp_f": [60, 75],
+    "growth_days": 70,
+    "growth_info": "Cold-hardy herb with slow germination but consistent cut-and-come-again production. Italian flat-leaf varieties outperform curly in hydroponic yield. Regrowth cycles occur every 3 weeks after each cut.",
+    "tips": [
+      "Harvest by cutting stems to 2-3 inches above medium; regrowth occurs every 3 weeks",
+      "Replace plants after 2-3 harvests (8-12 weeks) as older plants lose vigor",
+      "Provide 14-16 hours of light daily for maximum yield",
+      "Wide EC and temp tolerance makes parsley very forgiving — great for mixed towers"
+    ],
+    "germination": {
+      "temp_f": [70, 80],
+      "days": [14, 28],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Notoriously slow germinator — be patient. Soak seeds in warm water for 24 hours before sowing to speed germination. Heat mat recommended. Sow ¼ inch deep and keep consistently moist."
+    }
+  },
+  "Pepper (Bell)": {
+    "ph": [5.5, 6.5],
+    "ec": [2.0, 3.0],
+    "temp_f": [68, 75],
+    "growth_days": 90,
+    "growth_info": "Warm-season crop, slow to mature. Green peppers are unripe bells — leave longer for red/yellow. Needs consistent warmth and pollination.",
+    "tips": [
+      "Needs temps above 70°F consistently — cold slows growth significantly",
+      "Increase EC during fruiting for better yield",
+      "Shake or use a fan to help pollinate flowers",
+      "Remove early flowers on young plants to build root strength first"
+    ],
+    "germination": {
+      "temp_f": [75, 85],
+      "days": [7, 14],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Heat mat is strongly recommended — germination rate drops significantly below 70°F. Sow ¼ inch deep. Keep medium warm and moist. Move to bright light immediately after sprouts emerge."
+    }
+  },
+  "Pepper (Thai Chili)": {
+    "ph": [5.8, 6.5],
+    "ec": [2.0, 3.5],
+    "temp_f": [70, 85],
+    "growth_days": 100,
+    "growth_info": "Warm-season hot pepper requiring consistently high temps and a rich nutrient solution during fruiting. Self-pollinating but benefits from airflow around flowers. Compact plant, prolific producer once established.",
+    "tips": [
+      "Shift to low-nitrogen, high-P/K nutrients during flowering and fruiting",
+      "Never let temps drop below 65°F at night — cold shock causes flower drop",
+      "Shake plants or run a fan near flowers to improve pollination and fruit set",
+      "Maintain 40-70% humidity; too dry or too wet during flowering causes bud drop"
+    ],
+    "germination": {
+      "temp_f": [80, 90],
+      "days": [10, 21],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Hot peppers need high germination temps — heat mat at 85°F is essential. Can take 3 weeks; don't give up early. Sow ¼ inch deep. Expect uneven germination — pot on the sprouters as they appear."
+    }
+  },
+  "Spinach": {
+    "ph": [5.5, 6.5],
+    "ec": [1.8, 2.3],
+    "temp_f": [60, 68],
+    "growth_days": 40,
+    "growth_info": "Cold-preferring crop. Bolt-prone above 75°F. Higher EC than lettuce; nutrient-dense feeder. Ready in 5-6 weeks.",
+    "tips": [
+      "Needs higher EC than most leafy greens",
+      "Keep temps on the cool end for best flavor",
+      "Harvest whole plant at 6 weeks or outer leaves continuously",
+      "Avoid ammonia-heavy nutrients — spinach prefers nitrate nitrogen"
+    ],
+    "germination": {
+      "temp_f": [45, 65],
+      "days": [5, 9],
+      "needs_heat": false,
+      "needs_light": false,
+      "notes": "Cool-season germinator — avoid heat mats. Germinates best around 50-60°F. Sow ½ inch deep. Soaking seeds for 1-2 hours before sowing can improve germination rate."
+    }
+  },
+  "Strawberry": {
+    "ph": [5.5, 6.2],
+    "ec": [1.0, 1.8],
+    "temp_f": [60, 68],
+    "growth_days": 120,
+    "growth_info": "Slow to establish (2-4 months to first fruit). Everbearing varieties produce year-round. Sensitive to high EC. Keep runners trimmed.",
+    "tips": [
+      "Use everbearing varieties (Seascape, Albion) for continuous harvest",
+      "Remove runners unless you want propagation",
+      "Low EC critical — high salinity stunts fruit size",
+      "Expose to 12h light minimum for consistent fruiting"
+    ],
+    "germination": {
+      "temp_f": [65, 75],
+      "days": [14, 28],
+      "needs_heat": false,
+      "needs_light": true,
+      "notes": "Strawberry seeds need light and cold stratification for 3-4 weeks in the fridge before sowing. Surface sow (no covering) — seeds need light to germinate. Germination is slow and uneven; starting from runners or plugs is much faster."
+    }
+  },
+  "Swiss Chard": {
+    "ph": [6.0, 6.8],
+    "ec": [1.8, 2.3],
+    "temp_f": [60, 75],
+    "growth_days": 50,
+    "growth_info": "Colorful, cold-tolerant, and prolific. Cut-and-come-again harvesting. Closely related to spinach — similar care requirements.",
+    "tips": [
+      "Harvest outer stalks to keep center growing",
+      "Tolerates mild frost — wider temp range than most crops",
+      "Rainbow chard varieties are identical care but add color to setup",
+      "Good companion with spinach and kale — overlapping optimal ranges"
+    ],
+    "germination": {
+      "temp_f": [65, 75],
+      "days": [5, 7],
+      "needs_heat": false,
+      "needs_light": false,
+      "notes": "Easy and reliable germinator. Sow ½ inch deep, 2-3 seeds per cell — thin to one after emergence since chard seeds are actually multi-germ clusters. No heat mat needed at room temperature."
+    }
+  },
+  "Tomato (Cherry)": {
+    "ph": [5.5, 6.5],
+    "ec": [2.0, 3.5],
+    "temp_f": [65, 72],
+    "growth_days": 70,
+    "growth_info": "Heavy feeder requiring support (trellising or stakes). EC needs rise as plant matures and fruits. Needs pollination — shake or vibrate flowers daily.",
+    "tips": [
+      "Increase EC to 3.0-3.5 during fruiting for sweeter tomatoes",
+      "Prune suckers to focus energy on fruit production",
+      "Shake or vibrate flowers daily to self-pollinate",
+      "Watch for calcium deficiency (blossom end rot) — check pH carefully"
+    ],
+    "germination": {
+      "temp_f": [70, 80],
+      "days": [5, 10],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Heat mat recommended for fast, even germination. Sow ¼ inch deep. Move seedlings to bright light immediately after emergence to prevent leggy stretching. Start 6-8 weeks before transplanting."
+    }
+  },
+  "Tomato (Cloudy Day Hybrid)": {
+    "ph": [5.8, 6.5],
+    "ec": [2.0, 3.5],
+    "temp_f": [65, 75],
+    "growth_days": 70,
+    "growth_info": "Indeterminate hybrid bred to thrive in low-light, cool, and overcast conditions. Excellent blight resistance and consistent yields in indoor or northern settings. Requires trellising and active pruning.",
+    "tips": [
+      "Tolerates lower light than standard tomatoes — 8-10 hours minimum daily",
+      "Keep EC at 2.0-2.5 during flowering, raise to 3.0-3.5 during fruiting for sweeter fruit",
+      "Shake or vibrate flowers daily for self-pollination; a fan running near blooms helps",
+      "Prune suckers regularly — indeterminate growth needs active management to direct energy to fruit"
+    ],
+    "germination": {
+      "temp_f": [70, 80],
+      "days": [5, 10],
+      "needs_heat": true,
+      "needs_light": false,
+      "notes": "Same as other tomatoes — heat mat at 75-80°F for reliable germination. Sow ¼ inch deep. Move to light immediately after sprouts emerge to prevent stretching. Start 6-8 weeks before transplanting to tower."
+    }
   }
 }
