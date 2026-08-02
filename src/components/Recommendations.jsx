@@ -36,7 +36,7 @@ export default function Recommendations({ pods, speciesDb }) {
     )
   }
 
-  const labels = { ph: 'pH', ec: 'EC (mS/cm)', temp_f: 'Temp (°F)' }
+  const labels = { ph: 'pH', ec: 'EC (µS/cm)', temp_f: 'Temp (°F)' }
   const anyConflict = Object.values(recs).some(r => r.conflict)
 
   return (

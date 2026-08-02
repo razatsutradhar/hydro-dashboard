@@ -14,7 +14,7 @@ export default function SensorPanel({ sensorData, connected }) {
       </div>
       <div className="grid grid-cols-3 gap-3">
         <Metric icon={<Droplets size={18} className="text-blue-500" />} label="pH" value={fmt(sensorData?.ph)} unit="" ideal="5.5–7.0" />
-        <Metric icon={<Zap size={18} className="text-yellow-500" />} label="EC" value={fmt(sensorData?.ec)} unit="mS/cm" ideal="0.8–3.5" />
+        <Metric icon={<Zap size={18} className="text-yellow-500" />} label="EC" value={fmt(sensorData?.ec)} unit="µS/cm" ideal="0.8–3.5" />
         <Metric icon={<Thermometer size={18} className="text-orange-500" />} label="Temp" value={fmt(sensorData?.temp_f, 0)} unit="°F" ideal="60–85°F" />
       </div>
       {sensorData?.recorded_at && (
