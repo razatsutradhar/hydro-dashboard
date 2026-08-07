@@ -37,6 +37,7 @@ export default function Recommendations({ pods, speciesDb }) {
   }
 
   const labels = { ph: 'pH', ec: 'EC (µS/cm)', temp_f: 'Temp (°F)' }
+  const scale = { ph: 1, ec: 1000, temp_f: 1 }
   const anyConflict = Object.values(recs).some(r => r.conflict)
 
   return (
@@ -60,8 +61,8 @@ export default function Recommendations({ pods, speciesDb }) {
               </div>
             ) : (
               <div>
-                <p className="text-xl font-bold text-teal-600">{r.target}</p>
-                <p className="text-xs text-slate-400">range {r.min}–{r.max}</p>
+                <p className="text-xl font-bold text-teal-600">{+(r.target * scale[param]).toFixed(2)}</p>
+                <p className="text-xs text-slate-400">range {+(r.min * scale[param]).toFixed(2)}–{+(r.max * scale[param]).toFixed(2)}</p>
               </div>
             )}
           </div>
@@ -73,7 +74,7 @@ export default function Recommendations({ pods, speciesDb }) {
           <p className="text-xs text-amber-700 font-semibold mb-1">Conflicting parameters:</p>
           {Object.entries(recs).filter(([, r]) => r.conflict).map(([param, r]) => (
             <p key={param} className="text-xs text-slate-500">
-              {labels[param]}: {r.individualRanges.map(x => `${x.species} (${x.range[0]}–${x.range[1]})`).join(' vs ')}
+              {labels[param]}: {r.individualRanges.map(x => `${x.species} (${+(x.range[0] * scale[param]).toFixed(2)}–${+(x.range[1] * scale[param]).toFixed(2)})`).join(' vs ')}
             </p>
           ))}
         </div>
